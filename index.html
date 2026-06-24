@@ -28,9 +28,8 @@
         --select: var(--accent);
         --col-w: 101px;
         --col-head-h: 28px;
-        --sheet-row-count: 37;
         --viewport-h: 100svh;
-        --row-h: calc((var(--viewport-h) - var(--col-head-h)) / var(--sheet-row-count));
+        --row-h: 21px;
       }
 
       @supports (height: 100dvh) {
@@ -297,7 +296,7 @@
       .chat-panel {
         z-index: 3;
         grid-column: 4 / 9;
-        grid-row: 34 / 36;
+        grid-row: 31 / 33;
         display: grid;
         grid-template-columns: minmax(0, 1fr) var(--col-w);
         grid-template-rows: calc(var(--row-h) * 2);
@@ -307,7 +306,7 @@
       }
 
       .chat-panel.has-visible-messages {
-        grid-row: 30 / 36;
+        grid-row: 27 / 33;
         grid-template-rows: min-content calc(var(--row-h) * 2);
       }
 
@@ -320,7 +319,7 @@
       }
 
       .chat-panel.is-open {
-        grid-row: 29 / 36;
+        grid-row: 26 / 33;
         grid-template-rows: min-content calc(var(--row-h) * 2);
       }
 
@@ -433,7 +432,7 @@
 
       .notice-panel {
         grid-column: 1 / -1;
-        grid-row: 37 / 39;
+        grid-row: 33 / 35;
         display: grid;
         grid-template-columns: var(--col-w) minmax(0, 1fr);
         align-items: center;
@@ -589,6 +588,7 @@
         :root {
           --col-w: calc(100vw / 6);
           --col-head-h: 30px;
+          --row-h: 24px;
         }
 
         .screen {
@@ -628,26 +628,28 @@
 
         .chat-panel {
           grid-column: 1 / 7;
+          grid-row: 32 / 34;
         }
 
         .chat-panel.has-visible-messages {
-          grid-row: 30 / 36;
+          grid-row: 28 / 34;
         }
 
         .chat-panel.is-open {
-          grid-row: 29 / 36;
+          grid-row: 25 / 34;
         }
 
         .is-chat-focused .chat-panel.is-open {
-          grid-row: 25 / 36;
+          grid-row: 23 / 34;
         }
 
         .notice-panel {
           grid-column: 1 / 7;
+          grid-row: 34 / 36;
         }
 
         .is-chat-focused .notice-panel {
-          grid-row: 37 / 39;
+          grid-row: 34 / 36;
         }
 
         .is-chat-focused .message-feed.has-messages {
